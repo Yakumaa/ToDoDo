@@ -1,0 +1,28 @@
+.input__container {
+  padding-left: 13px;
+}
+
+.todo__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 7px 15px;
+  gap: 10px;
+  height: 75vh;
+}
+
+.list {
+  border: 2px solid black;
+  height: 100%;
+}
+
+.todo-list {
+  background-color: coral;
+}
+
+.progress-list {
+  background-color: grey;
+}
+
+.done-list {
+  background-color: greenyellow;
+}
