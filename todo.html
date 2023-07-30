@@ -7,19 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="src/styles/main.css" rel="stylesheet">
 	<link href="src/styles/todo.css" rel="stylesheet">
+	<script defer src="src/js/controller.js"></script>
 </head>
 
 <body>
 	<h1>ToDoDo</h1>
 	<div class="input__container">
-		<input type="text" />
+		<input id="todo-desc" type="text" required/>
 		<input id="deadline-date" type="date" />
-		<button type="button">Create New Todo</button>
+		<button id="create__todo--btn" type="button">Create New Todo</button>
 	</div>
 	<div class="todo__container">
 		<div class="list todo-list">
-			Todo
-			<ul>
+		<h3>Todo</h3>
+			<ul class="todo-list__list"> 
 				<li>
 					1 Todo
 				</li>
