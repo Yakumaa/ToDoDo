@@ -1,6 +1,4 @@
-import View from './View.js';
-
-class AddTodoView extends View {
+class AddTodoView {
   _parentElement = document.querySelector('.todo__list--list');
   _todoBtn = document.querySelector('#create__todo--btn');
   _textBox = document.getElementById('todo-desc');
@@ -26,10 +24,6 @@ class AddTodoView extends View {
       e.preventDefault();
       handler();
     });
-  }
-
-  _generateMarkup() {
-    
   }
 }
 
