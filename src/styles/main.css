@@ -47,7 +47,7 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  overflow: hidden;
+  overflow-y: scroll;
   display: flex;
   justify-content: center;
   background-color: var(--app-container);
