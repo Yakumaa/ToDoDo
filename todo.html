@@ -39,8 +39,8 @@
 						<h2 class='project-column-heading__title'>TO DO</h2>
 						<div class="buttons-container">
 							<!-- Create new task button-->
-							<button class='task__add' id="add-btn">
-								<span class="material-icons-sharp">add</span>
+							<button class='task__add' id="add__todo-btn">
+								<span id="todo__plus-btn" class="material-icons-sharp add">add</span>
 							</button>
 								
 							<button class='project-column-heading__options'>
@@ -49,10 +49,20 @@
 						</div>
 					</div>
 
-					<div class="todo--container">
 						<div class="add-todo-container">
+						<div class="task underlay hidden">
+							<div>
+								<div class="task__tags">
+									<span class="task__tag task__tag--new">New Tag</span>
+								</div>
+								<input type="text" id="todo-desc" required class="todo__desc-input" placeholder="Enter todo description">
+								<input id="deadline-date" type="date" />
+							</div>
+							<button class="create__todo-btn" type="submit">Create Todo</button>
+						</div>
 							<!-- <p contenteditable="true" class="input-box"></p> -->
 						</div>
+					<div class="todo--container">
 						<div class='task' draggable='true'>
 							<div class='task__tags'>
 								<span class='task__tag task__tag--copyright'>Copywriting</span>

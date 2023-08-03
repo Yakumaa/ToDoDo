@@ -344,3 +344,9 @@ body {
 .done-list {
   background-color: greenyellow;
 }
+
+/* sushant add */
+.hidden {
+  display: none;
+}
+
