@@ -26,7 +26,8 @@ class AddTodoView extends View {
   }
 
   addHandlerClick(handler) {
-    this._parentElement.querySelector('#create__todo--btn').addEventListener('click', handler);
+    // this._parentElement.querySelector('#create__todo--btn').addEventListener('click', handler);
+    this._parentElement.querySelector('#add-btn').addEventListener('click', handler);
   }
 };
 
