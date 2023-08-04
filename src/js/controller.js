@@ -9,7 +9,6 @@ const controlShowTodo = function() {
 
 const controlAddTodo = function() {
   const todo = addTodoView.getTodo() 
-  console.log(todo);
   model.todos.push(todo);
   todoView.render(model.todos);
 };

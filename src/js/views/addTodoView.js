@@ -31,6 +31,16 @@ class AddTodoView extends View {
     this._plusBtn.style.color = 'var(--light-grey)';
   }
 
+  _toggleAddTodo() {
+    this._plusBtn.classList.contains('add') ? this._createCloseBtn() : this._createAddBtn();
+    this._underlay.classList.toggle('hidden');
+
+  };
+
+  _addHandlerShowAddTodo() {
+    this._addTodoButton.addEventListener('click', this._toggleAddTodo.bind(this));
+  }
+
 
   getTodo() {
     const title = this._parentElement.querySelector('#todo-desc').value;
@@ -51,17 +61,6 @@ class AddTodoView extends View {
   addHandlerClick(handler) {
     this._createTodo.addEventListener('click', handler);
   }
-
-  _toggleAddTodo() {
-    this._plusBtn.classList.contains('add') ? this._createCloseBtn() : this._createAddBtn();
-    this._underlay.classList.toggle('hidden');
-
-  };
-
-  _addHandlerShowAddTodo() {
-    this._addTodoButton.addEventListener('click', this._toggleAddTodo.bind(this));
-  }
-
 };
 
 export default new AddTodoView();
