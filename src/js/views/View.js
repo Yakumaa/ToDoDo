@@ -1,10 +1,12 @@
 export default class View {
   _data;
-  render(data) {
+  render(data, render=true) {
+    // console.log(this);
     this._data = data;
-    const markup = this._data.map(el => this._generateMarkup(el)).join('');
+    const markup = this._generateMarkup();
+    if(!render) return markup;
     this._clear();
-    this._parentElement.insertAdjacentHTML('beforeend', markup);
+    this._parentElement.insertAdjacentHTML('afterBegin', markup);
   }
 
   _clear() {
