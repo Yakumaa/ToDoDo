@@ -20,6 +20,10 @@ class PreviewView extends View {
   </div>
 `;
   }
+
+  addHandlerRender(handler) {
+    window.addEventListener('load', handler); 
+  }
 }
 
 export default new PreviewView();
