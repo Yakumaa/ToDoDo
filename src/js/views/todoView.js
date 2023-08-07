@@ -6,10 +6,6 @@ class TodoView extends View {
   _generateMarkup(){
     return this._data.map(todo => previewView.render(todo, false));
   }
-
-  addHandlerRender(handler) {
-    window.addEventListener('load', handler); 
-  }
-}
+};
 
 export default new TodoView();

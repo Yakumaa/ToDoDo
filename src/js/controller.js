@@ -5,21 +5,24 @@ import addTodoView from './views/addTodoView.js';
 import previewView from './views/previewView.js';
 import progressView from './views/progressView.js';
 import doneView from './views/doneView.js';
+import { catTodos } from './helpers.js'; 
 
 const controlShowTodo = function() {
-  const todoTasks = model.todos.filter(el => el.status === 'todo');
-  const progressTasks = model.todos.filter(el => el.status === 'progress');
-  const doneTasks = model.todos.filter(el => el.status === 'done');
-  // console.log(todoTasks);
-  todoView.render(todoTasks); 
-  progressView.render(progressTasks);
-  doneView.render(doneTasks);
+  const todos = catTodos();
+  console.log(todos);
+  todoView.render(todos.todo); 
+  progressView.render(todos.progress);
+  doneView.render(todos.done);
 };
 
 const controlAddTodo = function() {
   const todo = addTodoView.getTodo() 
   model.todos.push(todo);
-  todoView.render(model.todos);
+  console.log(model.todos);
+  const todos = catTodos();
+  todoView.render(todos.todo); 
+  progressView.render(todos.progress);
+  doneView.render(todos.done);
 };
 
 const init = function() {
