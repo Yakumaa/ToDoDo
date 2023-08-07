@@ -9,7 +9,6 @@ import { catTodos } from './helpers.js';
 
 const controlShowTodo = function() {
   const todos = catTodos();
-  console.log(todos);
   todoView.render(todos.todo); 
   progressView.render(todos.progress);
   doneView.render(todos.done);
@@ -18,11 +17,7 @@ const controlShowTodo = function() {
 const controlAddTodo = function() {
   const todo = addTodoView.getTodo() 
   model.todos.push(todo);
-  console.log(model.todos);
-  const todos = catTodos();
-  todoView.render(todos.todo); 
-  progressView.render(todos.progress);
-  doneView.render(todos.done);
+  controlShowTodo();
 };
 
 const init = function() {

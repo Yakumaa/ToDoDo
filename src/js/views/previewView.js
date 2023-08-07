@@ -9,10 +9,6 @@ class PreviewView extends View {
     <div class='task__tags'>
       <span class='task__tag task__tag--copyright'>${this._data.tag}</span>
       <button class='task__options'><span class="material-icons-sharp">more_horiz</span></button>
-      <div class='hidden' id=${this._data.id}>
-            <button>Delete</button>
-            <button>Edit</button>
-      </div>
     </div>
     <p>${this._data.title}</p>
     <div class='task__stats'>
