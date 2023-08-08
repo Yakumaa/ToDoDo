@@ -8,13 +8,13 @@ export const todos = [{
 {
   title: 'ToDoDo2',
   dueDate: '2023-10-04',
-  id: 'todo1',
+  id: 'progress1',
   tag: 'Project progress',
   status: 'progress',
 },{
   title: 'ToDoDo3',
   dueDate: '2023-10-04',
-  id: 'todo1',
+  id: 'done1',
   tag: 'Project done',
   status: 'done',
 }]

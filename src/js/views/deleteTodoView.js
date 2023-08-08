@@ -5,7 +5,6 @@ class DeleteTodoView {
   _closeBtn = document.querySelector('.close-button');
   _confirmDeleteBtn = document.querySelector('.confirm-delete__btn');
 
-
   constructor() {
     this._addHandlerHideWindow();
   }

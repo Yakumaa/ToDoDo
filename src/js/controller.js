@@ -22,14 +22,20 @@ const controlAddTodo = function() {
 };
 
 const controlDeleteTodo = function(id) {
-  console.log('hi');
-  console.log(id);
+  // console.log('hi');
+  // console.log(id);
+  // finding the index of the id in model
+  const indexToDel = model.todos.findIndex(todo => todo.id === id);
+  // if index exists del -1 when index doesn't exist
+  if (indexToDel !== -1) {
+    model.todos.splice(indexToDel, 1);
+  }
+  controlShowTodo();
 }
 
 const init = function() {
   previewView.addHandlerRender(controlShowTodo);
   addTodoView.addHandlerClick(controlAddTodo);
-  // deleteTodoView.addHandlerDeleteTodo(controlDeleteTodo);
   deleteTodoView.addHandlerDelete(controlDeleteTodo);
 }
 init();
