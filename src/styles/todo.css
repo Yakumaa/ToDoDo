@@ -184,7 +184,6 @@ body {
   color: var(--light-grey);
   font-size: 12px;
   cursor: pointer;
-  cursor: pointer;
   margin-right: 5px;
 }
 .task__delete:hover{

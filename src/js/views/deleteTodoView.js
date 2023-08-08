@@ -1,9 +1,10 @@
 class DeleteTodoView {
   _parentElement = document.querySelector('.project');
-  _overlay = document.querySelector('.delete-confirm__container');
+  _deleteContainer = document.querySelector('.delete-confirm__container');
   _cancelBtn = document.querySelector('.cancel-delete__btn');
   _closeBtn = document.querySelector('.close-button');
   _confirmDeleteBtn = document.querySelector('.confirm-delete__btn');
+  _overlay = document.getElementById('overlay');
 
   constructor() {
     this._addHandlerHideWindow();
@@ -28,9 +29,11 @@ class DeleteTodoView {
   _addHandlerHideWindow() {
     this._cancelBtn.addEventListener('click', this.toggleConfirmActive.bind(this));
     this._closeBtn.addEventListener('click', this.toggleConfirmActive.bind(this));
+    this._overlay.addEventListener('click', this.toggleConfirmActive.bind(this));
   }
 
   toggleConfirmActive() {
+    this._deleteContainer.classList.toggle('active');
     this._overlay.classList.toggle('active');
   }
 
