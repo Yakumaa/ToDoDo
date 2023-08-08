@@ -14,7 +14,7 @@ class AddTodoView extends View {
   constructor() {
     super();
     this._addHandlerShowAddTodo();
-    this._addEventListeners();
+    // this._addEventListeners();
   };
 
   _clearInput() {
@@ -67,44 +67,44 @@ class AddTodoView extends View {
     this._createTodo.addEventListener('click', handler);
   }
 
-  _addEventListeners() {
-    const deleteTodoButton = document.querySelectorAll('[data-modal-target]');
-    const deleteCloseBtn = document.querySelectorAll('[data-close-button]');
-    const overlay = document.getElementById('overlay');
+  // _addEventListeners() {
+  //   const deleteTodoButton = document.querySelectorAll('.data-modal-target');
+  //   const deleteCloseBtn = document.querySelectorAll('[data-close-button]');
+  //   const overlay = document.getElementById('overlay');
 
-    deleteTodoButton.forEach(button => {
-      button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget);
-        openDeleteContainer(modal);
-      })
-    });
+  //   deleteTodoButton.forEach(button => {
+  //     button.addEventListener('click', () => {
+  //       const modal = document.querySelector(button.dataset.modalTarget);
+  //       openDeleteContainer(modal);
+  //     })
+  //   });
 
-    deleteCloseBtn.forEach(button => {
-      button.addEventListener('click', () => {
-        const modal = button.closest('.delete-confirm__container');
-        closeDeleteContainer(modal);
-      })
-    });
+  //   deleteCloseBtn.forEach(button => {
+  //     button.addEventListener('click', () => {
+  //       const modal = button.closest('.delete-confirm__container');
+  //       closeDeleteContainer(modal);
+  //     })
+  //   });
 
-    overlay.addEventListener('click', () => {
-      const modals = document.querySelectorAll('.delete-confirm__container.active')
-      modals.forEach(modal => {
-        closeDeleteContainer(modal)
-      })
-    })
+  //   overlay.addEventListener('click', () => {
+  //     const modals = document.querySelectorAll('.delete-confirm__container.active')
+  //     modals.forEach(modal => {
+  //       closeDeleteContainer(modal)
+  //     })
+  //   })
 
-    function openDeleteContainer(modal) {
-      if (modal == null) return;
-      modal.classList.add('active');
-      overlay.classList.add('active');
-    }
+  //   function openDeleteContainer(modal) {
+  //     if (modal == null) return;
+  //     modal.classList.add('active');
+  //     overlay.classList.add('active');
+  //   }
 
-    function closeDeleteContainer(modal) {
-      if (modal == null) return;
-      modal.classList.remove('active');
-      overlay.classList.remove('active');
-    }
-  }
+  //   function closeDeleteContainer(modal) {
+  //     if (modal == null) return;
+  //     modal.classList.remove('active');
+  //     overlay.classList.remove('active');
+  //   }
+  // }
 };
 
 // // const deleteTodoButton= previewView.parentElement.querySelectorAll('[data-modal-target]')

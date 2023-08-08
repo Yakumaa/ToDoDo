@@ -21,7 +21,7 @@ class PreviewView extends View {
       
       <div class='edit-delete__container'>
         <button class='task__edit'><span class="material-icons-sharp">edit</span></button>
-        <button data-modal-target="#delete__container" class='task__delete' id="delete-button"><span class="material-icons-sharp">delete</span></button>
+        <button class='task__delete' id="delete-button_${this._data.id}"><span class="material-icons-sharp">delete</span></button>
       </div>
     </div>
   </div>
