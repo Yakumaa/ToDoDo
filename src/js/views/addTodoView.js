@@ -60,6 +60,7 @@ class AddTodoView extends View {
       dueDate: dueDate,
       id: 'id' + new Date().getTime(),
       tag: 'Practice',
+      status: 'todo',
     }
   }
 
