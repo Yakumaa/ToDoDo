@@ -1,55 +1,39 @@
-// addEventListeners() {
-//   const deleteTodoButton = document.querySelectorAll('.task__delete');
-//   const deleteCloseBtn = document.querySelectorAll('[data-close-button]');
-//   const overlay = document.getElementById('overlay');
+class DeleteTodoView {
+  _parentElement = document.querySelector('.project');
+  _overlay = document.querySelector('.delete-confirm__container');
+  _cancelBtn = document.querySelector('.cancel-delete__btn');
+  _closeBtn = document.querySelector('.close-button');
+  _confirmDeleteBtn = document.querySelector('.confirm-delete__btn');
 
-//   deleteTodoButton.forEach(button => {
-//     button.addEventListener('click', () => {
-//       const modal = document.querySelector(button.dataset.modalTarget);
-//       openDeleteContainer(modal);
-//     })
-//   });
 
-//   deleteCloseBtn.forEach(button => {
-//     button.addEventListener('click', () => {
-//       const modal = button.closest('.delete-confirm__container');
-//       closeDeleteContainer(modal);
-//     })
-//   });
-
-//   overlay.addEventListener('click', () => {
-//     const modals = document.querySelectorAll('.delete-confirm__container.active')
-//     modals.forEach(modal => {
-//       closeDeleteContainer(modal)
-//     })
-//   })
-
-//   function openDeleteContainer(modal) {
-//     if (modal == null) return;
-//     modal.classList.add('active');
-//     overlay.classList.add('active');
-//   }
-
-//   function closeDeleteContainer(modal) {
-//     if (modal == null) return;
-//     modal.classList.remove('active');
-//     overlay.classList.remove('active');
-//   }
-// }
-
-class DeleteTodoView{
-
-  constructor(handler){
-    this.addHandlerDeleteTodo(handler);
+  constructor() {
+    this._addHandlerHideWindow();
   }
-  _deleteTodoButton = document.querySelectorAll('.task__delete');
 
-  addHandlerDeleteTodo(handler){
-    console.log(this._deleteTodoButton);
-    this._deleteTodoButton.forEach(deleteBtn => {
-      deleteBtn.addEventListener('click', handler)
-    })
+  addHandlerDelete(handler) {
+    let delTodoId;
+    this._parentElement.addEventListener('click', function(e){ 
+      // console.log(e);
+      const btn = e.target.closest('.task__delete');
+      if (!btn) return;
+      delTodoId = (btn.id.split('_')[1]);
+      // console.log(this)
+      this.toggleConfirmActive();
+    }.bind(this)); // use bind or else use an arrow function
+    this._confirmDeleteBtn.addEventListener('click', () => {
+      this.toggleConfirmActive();
+      handler(delTodoId);
+    });
   }
+
+  _addHandlerHideWindow() {
+    this._cancelBtn.addEventListener('click', this.toggleConfirmActive.bind(this));
+    this._closeBtn.addEventListener('click', this.toggleConfirmActive.bind(this));
+  }
+
+  toggleConfirmActive() {
+    this._overlay.classList.toggle('active');
+  }
+
 }
-
 export default new DeleteTodoView();
