@@ -63,37 +63,40 @@
 						</div>
 						<!-- <p contenteditable="true" class="input-box"></p> -->
 					</div>
-					<div class="todo--container">
-						<!--  <div class='task' draggable='true'> -->
-						<!-- 	<div class='task__tags'> -->
-						<!-- 		<span class='task__tag task__tag--copyright'>Copywriting</span> -->
-						<!-- 		<button class='task__options'><span class="material-icons-sharp">more_horiz</span></button> -->
-						<!-- 	</div> -->
-						<!-- 	<p>to do #1</p> -->
-						<!-- 	<div class='task__stats'> -->
-						<!-- TODO: make the flag 12px -->
-						<!-- 		<span><time datetime="2021-11-24T20:00:00"><span class="material-icons-sharp">flag</span>Nov -->
-						<!-- 				24</time></span> -->
-						<!-- 		<span><span class="material-icons-sharp">chat_bubble</span>3</span> -->
-						<!-- 		<span class='task__owner'></span>-->
-						<!-- add profile picture here -->
-						<!-- 	</div> -->
-						<!-- </div>  -->
 
-						<!-- <div class='task' draggable='true'> -->
-						<!-- 	<div class='task__tags'> -->
-						<!-- 		<span class='task__tag task__tag--design'>UI Design</span> -->
-						<!-- TODO: add more create new buttons with fixed positions -->
-						<!-- 		<button class='task__options'><span class="material-icons-sharp">more_horiz</span></button> -->
-						<!-- 	</div> -->
-						<!-- 	<p>to do #2</p> -->
-						<!-- 	<div class='task__stats'> -->
-						<!-- 		<span><time datetime="2021-11-24T20:00:00"><span class="material-icons-sharp">flag</span>Nov -->
-						<!-- 				24</time></span> -->
-						<!-- 		<span><span class="material-icons-sharp">chat_bubble</span>3</span> -->
-						<!-- 		<span class='task__owner'></span> -->
-						<!-- 	</div> -->
-						<!-- </div> -->
+					<div class="delete-confirm__container" id="delete__container"> <!-- add active here-->
+						<div class="delete-modal-header">
+							<div class="delete-modal-title">Delete Todo?</div>
+							<button data-close-button class="close-button">&times;</button>
+						</div>
+						<div class="delete-modal-body">Are you sure you want to delete this todo item?</div>
+						<div class="delete-modal-buttons">
+							<button>Cancel</button>
+							<button>Delete</button>
+						</div>
+					</div>
+					<div id="overlay"></div>
+
+					<div class="todo--container">
+						<!-- <div class='task' draggable='true'> 
+							<div class='task__tags'>
+								<span class='task__tag task__tag--copyright'>Copywriting</span>
+								<button class='task__options'><span class="material-icons-sharp">more_horiz</span></button>
+							</div>
+							<p>to do #1</p>
+							<div class='task__stats'>
+								<div class='flag-note-owner__container'>
+									<span><time datetime="2021-11-24T20:00:00"><span class="material-icons-sharp">flag</span>Nov 24</time></span>
+									<span><span class="material-icons-sharp">chat_bubble</span>3</span>
+									<span class='task__owner'></span>
+								</div>
+								
+								<div class='edit-delete__container'>
+									<button class='task__edit'><span class="material-icons-sharp">edit</span></button>
+									<button data-modal-target="#delete__container" class='task__delete'><span class="material-icons-sharp">delete</span></button>
+								</div>
+							</div>
+						</div>  -->
 					</div>
 				</div>
 
