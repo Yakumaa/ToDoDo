@@ -28,13 +28,6 @@ class PreviewView extends View {
 `;
   }
 
-  addHandlerDelete(handler) {
-    this._parentElement.addEventListener('click', function(e)  {
-      const btn = e.target.closest('.task__delete');
-      if (!btn) return;
-      handler();
-    });
-  }
   addHandlerRender(handler) {
     window.addEventListener('load', handler); 
   }

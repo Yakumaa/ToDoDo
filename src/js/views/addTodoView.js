@@ -56,6 +56,7 @@ class AddTodoView extends View {
       id: 'id' + new Date().getTime(),
       tag: 'Practice',
       status: 'todo',
+      createdAt: new Date().getTime(), 
     }
   }
 
