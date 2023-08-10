@@ -1,26 +1,26 @@
-class DeleteTodoView {
+class EditTodoView {
   _parentElement = document.querySelector('.project');
-  _deleteContainer = document.querySelector('.delete-confirm__container');
-  _cancelBtn = document.querySelector('.cancel-delete__btn');
-  _closeBtn = document.querySelector('.delete-close-button');
-  _confirmDeleteBtn = document.querySelector('.confirm-delete__btn');
-  _overlay = document.getElementById('deleteOverlay');
+  _editContainer = document.querySelector('.edit-confirm__container');
+  _cancelBtn = document.querySelector('.cancel-edit__btn');
+  _closeBtn = document.querySelector('.edit-close-button');
+  _confirmEditBtn = document.querySelector('.confirm-edit__btn');
+  _overlay = document.getElementById('editOverlay');
 
   constructor() {
     this._addHandlerHideWindow();
   }
 
-  addHandlerDelete(handler) {
-    let delTodoId;
+  addHandlerEdit(handler) {
+    let editTodoId;
     this._parentElement.addEventListener('click', function(e){ 
-      const btn = e.target.closest('.task__delete');
+      const btn = e.target.closest('.task__edit');
       if (!btn) return;
-      delTodoId = (btn.id.split('_')[1]);
+      editTodoId = (btn.id.split('_')[1]);
       this._toggleConfirmActive();
     }.bind(this)); // use bind or else use an arrow function
-    this._confirmDeleteBtn.addEventListener('click', () => {
+    this._confirmEditBtn.addEventListener('click', () => {
       this._toggleConfirmActive();
-      handler(delTodoId);
+      handler(editTodoId);
     });
   }
 
@@ -31,9 +31,9 @@ class DeleteTodoView {
   }
 
   _toggleConfirmActive() {
-    this._deleteContainer.classList.toggle('active');
+    this._editContainer.classList.toggle('active');
     this._overlay.classList.toggle('active');
   }
 
 }
-export default new DeleteTodoView();
+export default new EditTodoView();
