@@ -430,6 +430,11 @@ body {
   display: none;
 }
 
+.draggable.dragging {
+  opacity: .5;
+
+}
+
 #overlay{
   position: fixed;
   opacity: 0;
