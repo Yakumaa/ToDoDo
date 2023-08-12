@@ -1,11 +1,11 @@
 "use strict";
+import { catTodos } from './helpers.js';
 import * as model from './model.js'
 import todoView from './views/todoView.js';
 import addTodoView from './views/addTodoView.js';
 import previewView from './views/previewView.js';
 import progressView from './views/progressView.js';
 import doneView from './views/doneView.js';
-import { catTodos } from './helpers.js';
 import deleteTodoView from './views/deleteTodoView.js';
 import dragDropView from './views/dragDropView.js';
 
@@ -36,9 +36,7 @@ const controlDeleteTodo = function(id) {
 
 const controlDragDrop = function(id, status) {
   const changeTodo = model.todos.findIndex(todo => todo.id === id);
-  console.log(model.todos[changeTodo]);
   model.todos[changeTodo].status = status;
-  console.log(model.todos[changeTodo]);
   controlShowTodo();
 };
 
