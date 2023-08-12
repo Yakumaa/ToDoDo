@@ -1,3 +1,4 @@
+import * as model from '../model.js'
 class EditTodoView {
   _parentElement = document.querySelector('.project');
   _editContainer = document.querySelector('.edit-confirm__container');
@@ -5,6 +6,7 @@ class EditTodoView {
   _closeBtn = document.querySelector('.edit-close-button');
   _confirmEditBtn = document.querySelector('.confirm-edit__btn');
   _overlay = document.getElementById('editOverlay');
+  _editTitleInput = document.querySelector('.edit-title-input');
 
   constructor() {
     this._addHandlerHideWindow();
@@ -16,11 +18,18 @@ class EditTodoView {
       const btn = e.target.closest('.task__edit');
       if (!btn) return;
       editTodoId = (btn.id.split('_')[1]);
+      // console.log(editTodoId)
+
+      // Get the title of the corresponding todo
+      const todoToEdit = model.todos.find(todo => todo.id === editTodoId);
+      // console.log(todoToEdit)
+      this._editTitleInput.textContent = todoToEdit.title;
       this._toggleConfirmActive();
     }.bind(this)); // use bind or else use an arrow function
     this._confirmEditBtn.addEventListener('click', () => {
+      const newTitle = this._editTitleInput.textContent;
       this._toggleConfirmActive();
-      handler(editTodoId);
+      handler(editTodoId, newTitle);
     });
   }
 
