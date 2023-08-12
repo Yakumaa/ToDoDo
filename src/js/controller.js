@@ -34,10 +34,18 @@ const controlDeleteTodo = function(id) {
   controlShowTodo();
 }
 
+const controlDragDrop = function(id, status) {
+  const changeTodo = model.todos.findIndex(todo => todo.id === id);
+  console.log(model.todos[changeTodo]);
+  model.todos[changeTodo].status = status;
+  console.log(model.todos[changeTodo]);
+  controlShowTodo();
+};
+
 const init = function() {
   previewView.addHandlerRender(controlShowTodo);
   addTodoView.addHandlerClick(controlAddTodo);
   deleteTodoView.addHandlerDelete(controlDeleteTodo);
-  dragDropView.addHandlerDrag();
+  dragDropView.addHandlerDragOver(controlDragDrop);
 }
 init();
