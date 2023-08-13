@@ -20,7 +20,7 @@ class PreviewView extends View {
       </div>
       
       <div class='edit-delete__container'>
-        <button class='task__edit'><span class="material-icons-sharp">edit</span></button>
+        <button class='task__edit' id="edit-button_${this._data.id}"><span class="material-icons-sharp">edit</span></button>
         <button class='task__delete' id="delete-button_${this._data.id}"><span class="material-icons-sharp">delete</span></button>
       </div>
     </div>

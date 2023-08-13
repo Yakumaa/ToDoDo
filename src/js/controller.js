@@ -8,6 +8,7 @@ import progressView from './views/progressView.js';
 import doneView from './views/doneView.js';
 import deleteTodoView from './views/deleteTodoView.js';
 import dragDropView from './views/dragDropView.js';
+import editTodoView from './views/editTodoView.js';
 
 const controlShowTodo = function() {
   const todos = catTodos();
@@ -39,11 +40,21 @@ const controlDragDrop = function(id, status) {
   model.todos[changeTodo].status = status;
   controlShowTodo();
 };
+const controlEditTodo = function(id){
+  console.log('this is edit');
+  // const indexToEdit = model.todos.findIndex(todo => todo.id === id);
+  // // if index exists del -1 when index doesn't exist
+  // if (indexToEdit !== -1) {
+  //   model.todos.splice(indexToEdit, 1);
+  // }
+  controlShowTodo();
+}
 
 const init = function() {
   previewView.addHandlerRender(controlShowTodo);
   addTodoView.addHandlerClick(controlAddTodo);
   deleteTodoView.addHandlerDelete(controlDeleteTodo);
   dragDropView.addHandlerDragOver(controlDragDrop);
+  editTodoView.addHandlerEdit(controlEditTodo);
 }
 init();
