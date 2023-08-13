@@ -5,7 +5,7 @@ class PreviewView extends View {
 
   _generateMarkup() {
     return `
-  <div class='task' draggable='true'>
+  <div class='task draggable' id='task_${this._data.id}' draggable='true'>
     <div class='task__tags'>
       <span class='task__tag task__tag--copyright'>${this._data.tag}</span>
       <!-- <button class='task__options'><span class="material-icons-sharp">more_horiz</span></button> -->
