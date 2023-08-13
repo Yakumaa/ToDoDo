@@ -40,15 +40,8 @@ const controlDragDrop = function(id, status) {
   model.todos[changeTodo].status = status;
   controlShowTodo();
 };
-const controlEditTodo = function(id){
-  console.log('this is edit');
-  // const indexToEdit = model.todos.findIndex(todo => todo.id === id);
-  // // if index exists del -1 when index doesn't exist
-  // if (indexToEdit !== -1) {
-  //   model.todos.splice(indexToEdit, 1);
 
-const controlEditTodo = function(id, newTitle){
-  // console.log(id)
+const controlEditTodo = function(id, newTitle){ // console.log(id)
   // const editTitle = model.todos.title;
   // console.log(editTitle);
   // const indexToEdit = model.todos.find(todo => todo.id === id);
@@ -72,4 +65,5 @@ const init = function() {
   dragDropView.addHandlerDragOver(controlDragDrop);
   editTodoView.addHandlerEdit(controlEditTodo);
 }
+
 init();
