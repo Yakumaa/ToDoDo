@@ -46,7 +46,22 @@ const controlEditTodo = function(id){
   // // if index exists del -1 when index doesn't exist
   // if (indexToEdit !== -1) {
   //   model.todos.splice(indexToEdit, 1);
+
+const controlEditTodo = function(id, newTitle){
+  // console.log(id)
+  // const editTitle = model.todos.title;
+  // console.log(editTitle);
+  // const indexToEdit = model.todos.find(todo => todo.id === id);
+
+  // if(indexToEdit){
+  //   // console.log(indexToEdit.title);
+  //   const editTitleInput = document.querySelector('.edit-title-input');
+  //   editTitleInput.textContent = indexToEdit.title;
   // }
+  const todoToEdit = model.todos.find(todo => todo.id === id);
+  if (todoToEdit) {
+    todoToEdit.title = newTitle;
+  }
   controlShowTodo();
 }
 
