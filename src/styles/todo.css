@@ -19,7 +19,6 @@ body {
   display: block;
   overflow-y: scroll;
 }
-
 .display {
   display:flex;
   align-items:center;
@@ -485,7 +484,13 @@ body {
   display: none;
 }
 
+.draggable.dragging {
+  opacity: .5;
+}
+/*/////////////////////////*/
+
 /* #overlay{
+>>>>>>> main
   position: fixed;
   opacity: 0;
   transition: 200ms ease-in-out;

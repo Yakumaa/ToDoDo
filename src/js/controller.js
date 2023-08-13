@@ -1,12 +1,13 @@
 "use strict";
+import { catTodos } from './helpers.js';
 import * as model from './model.js'
 import todoView from './views/todoView.js';
 import addTodoView from './views/addTodoView.js';
 import previewView from './views/previewView.js';
 import progressView from './views/progressView.js';
 import doneView from './views/doneView.js';
-import { catTodos } from './helpers.js';
 import deleteTodoView from './views/deleteTodoView.js';
+import dragDropView from './views/dragDropView.js';
 import editTodoView from './views/editTodoView.js';
 
 const controlShowTodo = function() {
@@ -34,6 +35,18 @@ const controlDeleteTodo = function(id) {
   controlShowTodo();
 }
 
+const controlDragDrop = function(id, status) {
+  const changeTodo = model.todos.findIndex(todo => todo.id === id);
+  model.todos[changeTodo].status = status;
+  controlShowTodo();
+};
+const controlEditTodo = function(id){
+  console.log('this is edit');
+  // const indexToEdit = model.todos.findIndex(todo => todo.id === id);
+  // // if index exists del -1 when index doesn't exist
+  // if (indexToEdit !== -1) {
+  //   model.todos.splice(indexToEdit, 1);
+
 const controlEditTodo = function(id, newTitle){
   // console.log(id)
   // const editTitle = model.todos.title;
@@ -56,6 +69,7 @@ const init = function() {
   previewView.addHandlerRender(controlShowTodo);
   addTodoView.addHandlerClick(controlAddTodo);
   deleteTodoView.addHandlerDelete(controlDeleteTodo);
+  dragDropView.addHandlerDragOver(controlDragDrop);
   editTodoView.addHandlerEdit(controlEditTodo);
 }
 init();
