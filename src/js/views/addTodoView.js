@@ -49,7 +49,6 @@ class AddTodoView extends View {
     this._clearInput();
     this._toggleAddTodo();
     if (!title) return;
-    console.log(title, dueDate);
     return {
       title: title,
       dueDate: dueDate,

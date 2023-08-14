@@ -5,7 +5,7 @@ class DoneView extends View {
   _parentElement = document.querySelector('.done--container');
 
   _generateMarkup() {
-    return this._data.map(done => previewView.render(done, false));
+    return this._data.map(done => previewView.render(done, false)).join('');
   }
 };
 
