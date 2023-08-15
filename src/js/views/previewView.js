@@ -14,7 +14,7 @@ class PreviewView extends View {
     <div class='task__stats'>
       <!-- TODO: make the flag 12px -->
       <div class='flag-note-owner__container'>
-        <span><time datetime="${this._data.dueDate}"><span class="material-icons-sharp">flag</span>${this._data.dueDate.slice(5)}</time></span>
+        <span><time datetime="${this._data.dueDate}"><span class="material-icons-sharp">flag</span>${new Date(this._data.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</time></span>
         <span><span class="material-icons-sharp">chat_bubble</span>3</span>
         <span class='task__owner'></span> <!-- add profile picture here -->
       </div>

@@ -55,9 +55,11 @@
 								<div class="task__tags">
 									<span class="task__tag task__tag--new">New Tag</span>
 								</div>
-								<input type="text" id="todo-desc" required class="todo__desc-input"
-									placeholder="Enter todo description">
-								<input id="deadline-date" type="date" />
+								<div class="title-calendar-input">
+									<input type="text" id="todo-desc" required class="todo__desc-input" placeholder="Enter todo description">
+									<input id="deadline-date" type="date" />
+								</div>
+								
 							</div>
 							<button class="create__todo-btn" type="submit">Create Todo</button>
 						</div>
@@ -82,9 +84,8 @@
 							<button class="edit-close-button">&times;</button>
 						</div>
 						<div class="edit-modal-body">
-							<div class="edit-title-input" contenteditable='true'>
-								
-							</div>
+							<div class="edit-title-input" contenteditable='true'></div>
+							<input type="date" class="edit-calendar" contenteditable='true'></input>
 						</div>
 						<div class="edit-modal-buttons">
 							<button class="cancel-edit__btn">Cancel</button>

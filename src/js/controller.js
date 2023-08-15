@@ -41,7 +41,7 @@ const controlDragDrop = function(id, status) {
   controlShowTodo();
 };
 
-const controlEditTodo = function(id, newTitle){ // console.log(id)
+const controlEditTodo = function(id, newTitle, newDate){ // console.log(id)
   // const editTitle = model.todos.title;
   // console.log(editTitle);
   // const indexToEdit = model.todos.find(todo => todo.id === id);
@@ -54,6 +54,7 @@ const controlEditTodo = function(id, newTitle){ // console.log(id)
   const todoToEdit = model.todos.find(todo => todo.id === id);
   if (todoToEdit) {
     todoToEdit.title = newTitle;
+    todoToEdit.dueDate = newDate;
   }
   controlShowTodo();
 }
