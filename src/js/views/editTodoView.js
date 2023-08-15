@@ -7,6 +7,7 @@ class EditTodoView {
   _confirmEditBtn = document.querySelector('.confirm-edit__btn');
   _overlay = document.getElementById('editOverlay');
   _editTitleInput = document.querySelector('.edit-title-input');
+  _editCalendar = document.querySelector('.edit-calendar');
 
   constructor() {
     this._addHandlerHideWindow();
@@ -24,12 +25,14 @@ class EditTodoView {
       const todoToEdit = model.todos.find(todo => todo.id === editTodoId);
       // console.log(todoToEdit)
       this._editTitleInput.textContent = todoToEdit.title;
+      this._editCalendar.value = todoToEdit.dueDate;
       this._toggleConfirmActive();
     }.bind(this)); // use bind or else use an arrow function
     this._confirmEditBtn.addEventListener('click', () => {
       const newTitle = this._editTitleInput.textContent;
+      const newDate = this._editCalendar.value;
       this._toggleConfirmActive();
-      handler(editTodoId, newTitle);
+      handler(editTodoId, newTitle, newDate);
     });
   }
 
