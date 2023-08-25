@@ -38,7 +38,6 @@ const controlDeleteTodo = function(id) {
 const controlDragDrop = function(id, status) {
   const changeTodo = model.todos.findIndex(todo => todo.id === id);
   model.todos[changeTodo].status = status;
-  controlShowTodo();
 };
 
 const controlEditTodo = function(id, newTitle, newDate){ // console.log(id)
