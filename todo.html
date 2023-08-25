@@ -10,16 +10,65 @@
 	<!-- Material icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 	<script defer type="module" src="src/js/controller.js"></script>
+	<script src="src/js/views/sidebarView.js" defer></script>
 </head>
 
 <body>
-	<h1>ToDoDo</h1>
+	<!-- <h1>ToDoDo</h1> -->
 	<!-- <div class="input__container" id="input-container">
 		<input id="todo-desc" type="text" required/>
 		<input id="deadline-date" type="date" />
 		<button id="create__todo--btn" type="button">Create New Todo</button>
 	</div> -->
 	<div class='app'>
+		<aside class="sidebar-container">
+			<div class="sidebar">
+				<header>
+					<!--TODO: move the logo inside project-info-->
+					<div class="top">
+						<div class="logo">
+							<img src="src/img/wave-wallpaper.png">
+							<div class="sidebar-text"><h2>ToDODO</h2></div>
+						</div>
+					</div>
+					
+					<i class="sidebar-collapser toggle">
+						<span class="material-icons-sharp icon">chevron_left</span>
+					</i>
+				</header>
+
+				<a href="index.html">
+					<span class="material-icons-sharp icon">grid_view</span>
+					<div class="sidebar-text"><h3>Dashboard</h3></div>
+				</a>
+		
+				<a href="todo.html"  class="active">
+					<span class="material-icons-sharp icon">view_week</span>
+					<div class="sidebar-text"><h3>Board</h3></div>
+				</a>
+		
+				<a href="#">
+					<span class="material-icons-sharp icon">format_list_bulleted</span>
+					<div class="sidebar-text"><h3>Projects</h3></div>
+				</a>
+		
+				<a href="#">
+					<span class="material-icons-sharp icon">date_range</span>
+					<div class="sidebar-text"><h3>Calendar</h3></div>
+				</a>
+		
+				<a href="#">
+					<span class="material-icons-sharp icon">settings</span>
+					<div class="sidebar-text"><h3>Settings</h3></div>
+				</a>
+
+				<a href="#">
+					<span class="material-icons-sharp icon">logout</span>
+					<div class="sidebar-text"><h3>Logout</h3></div>
+				</a>
+			</div>
+		</aside>
+
 		<main class='project'>
 			<div class='project-info'>
 				<h1>ToDODO</h1>
