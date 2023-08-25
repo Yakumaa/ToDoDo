@@ -10,50 +10,55 @@
 	
 	<!-- Material icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+	<script src="src/js/views/sidebarView.js" defer></script>
 </head>
 
 <body>
 	<div class="container">
-		<aside>
-			<div class="top">
-				<div class="logo">
-					<img src="src/img/wave-wallpaper.png">
-					<h2>ToDODO</h2>
-				</div>
-				<div class="close" id="close-btn">
-					<span class="material-icons-sharp">close</span>
-				</div>
-			</div>
-
+		<aside class="sidebar-container">
 			<div class="sidebar">
+				<header>
+					<!--TODO: make the top a hamburger menu-->
+					<div class="top">
+						<div class="logo">
+							<img src="src/img/wave-wallpaper.png">
+							<div class="sidebar-text"><h2>ToDODO</h2></div>
+						</div>
+					</div>
+					
+					<i class="sidebar-collapser toggle">
+						<span class="material-icons-sharp icon">chevron_left</span>
+					</i>
+				</header>
+
 				<a href="#" class="active">
-					<span class="material-icons-sharp">grid_view</span>
-					<h3>Dashboard</h3>
+					<span class="material-icons-sharp icon">grid_view</span>
+					<div class="sidebar-text"><h3>Dashboard</h3></div>
 				</a>
 		
 				<a href="todo.html">
-					<span class="material-icons-sharp">view_week</span>
-					<h3>Board</h3>
+					<span class="material-icons-sharp icon">view_week</span>
+					<div class="sidebar-text"><h3>Board</h3></div>
 				</a>
 		
 				<a href="#">
-					<span class="material-icons-sharp">format_list_bulleted</span>
-					<h3>Projects</h3>
+					<span class="material-icons-sharp icon">format_list_bulleted</span>
+					<div class="sidebar-text"><h3>Projects</h3></div>
 				</a>
 		
 				<a href="#">
-					<span class="material-icons-sharp">date_range</span>
-					<h3>Calendar</h3>
+					<span class="material-icons-sharp icon">date_range</span>
+					<div class="sidebar-text"><h3>Calendar</h3></div>
 				</a>
 		
 				<a href="#">
-					<span class="material-icons-sharp">settings</span>
-					<h3>Settings</h3>
+					<span class="material-icons-sharp icon">settings</span>
+					<div class="sidebar-text"><h3>Settings</h3></div>
 				</a>
 
 				<a href="#">
-					<span class="material-icons-sharp">logout</span>
-					<h3>Logout</h3>
+					<span class="material-icons-sharp icon">logout</span>
+					<div class="sidebar-text"><h3>Logout</h3></div>
 				</a>
 			</div>
 
