@@ -24,8 +24,6 @@ const controlAddTodo = function() {
 };
 
 const controlDeleteTodo = function(id) {
-  // console.log('hi');
-  // console.log(id);
   // finding the index of the id in model
   const indexToDel = model.todos.findIndex(todo => todo.id === id);
   // if index exists del -1 when index doesn't exist
