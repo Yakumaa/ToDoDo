@@ -32,14 +32,12 @@ class DragDropView {
         const afterElement = this._getDragAfterElement(container, e.clientY)
         const draggable = document.querySelector('.dragging')
         if (afterElement == null) {
-          container.appendChild(draggable)
+          // container.appendChild(draggable)
+          container.getElementsByClassName("containers")[0].appendChild(draggable);
         } else {
-          try {
-          container.insertBefore(draggable, afterElement)
-          } catch {
-            container.appendChild(draggable);
+          // container.insertBefore(draggable, afterElement)
+          container.getElementsByClassName("containers")[0].insertBefore(draggable, afterElement);
           }
-        }
       })
     });
   };
