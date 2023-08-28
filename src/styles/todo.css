@@ -338,7 +338,7 @@ body {
 .edit-modal-buttons button:first-child {
   background-color: var(--light-grey);
 }
-.tag-progress {
+/* .tag-progress {
   margin: 1.5rem 0;
 }
 .tag-progress h2 {
@@ -419,7 +419,7 @@ body {
 }
 .task-icon--edit {
   background-color: #7784ee;
-}
+} */
 @media only screen and (max-width: 1300px) {
   .project {
     max-width: 100%;
@@ -545,7 +545,7 @@ body {
 }
 
 .todo__desc-input{
-  min-width: 200px;
+  /* min-width: 200px; */
   flex-grow: 1; 
 }
 
