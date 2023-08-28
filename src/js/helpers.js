@@ -6,3 +6,7 @@ export const catTodos = function() {
   const doneTasks = model.todos.filter(el => el.status === 'done');
   return {todo: todoTasks, progress: progressTasks, done: doneTasks};
 }
+
+export const getTodo = function(id) {
+  return model.todos.find(todo => todo.id === id);
+}

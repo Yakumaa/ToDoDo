@@ -1,4 +1,4 @@
-import * as model from '../model.js'
+import { getTodo } from "../helpers.js"; 
 class EditTodoView {
   _parentElement = document.querySelector('.project');
   _editContainer = document.querySelector('.edit-confirm__container');
@@ -21,11 +21,17 @@ class EditTodoView {
       editTodoId = (btn.id.split('_')[1]);
       // console.log(editTodoId)
 
-      // Get the title of the corresponding todo
-      const todoToEdit = model.todos.find(todo => todo.id === editTodoId);
-      // console.log(todoToEdit)
+      // // Get the title of the corresponding todo
+      // const todoToEdit = model.todos.find(todo => todo.id === editTodoId);
+      // // console.log(todoToEdit)
+      
+      const todoToEdit = getTodo(editTodoId);
+      
       this._editTitleInput.textContent = todoToEdit.title;
       this._editCalendar.value = todoToEdit.dueDate;
+      
+      // Get todo
+
       this._toggleConfirmActive();
     }.bind(this)); // use bind or else use an arrow function
     this._confirmEditBtn.addEventListener('click', () => {

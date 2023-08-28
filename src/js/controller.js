@@ -18,7 +18,8 @@ const controlShowTodo = function() {
 };
 
 const controlAddTodo = function() {
-  const todo = addTodoView.getTodo()
+  const todo = addTodoView.getTodo();
+  if (!todo) return controlShowTodo();
   model.todos.splice(0, 0, todo);
   controlShowTodo();
 };

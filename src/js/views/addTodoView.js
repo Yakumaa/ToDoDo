@@ -44,11 +44,15 @@ class AddTodoView extends View {
 
   getTodo() {
     const title = this._parentElement.querySelector('#todo-desc').value;
-    const dueDate = this._parentElement.querySelector('#deadline-date').value;
-
+    const dueDate = new Date(this._parentElement.querySelector('#deadline-date').value);
+    const currentDate = new Date();
     this._clearInput();
     this._toggleAddTodo();
     if (!title) return;
+    if (currentDate.getTime() > dueDate.getTime()) {
+      console.error('Date in Past');
+      return;
+    }
     return {
       title: title,
       dueDate: dueDate,
