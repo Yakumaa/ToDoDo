@@ -24,7 +24,7 @@
   --message-btn: #fff;
 }
 
-.dark:root {
+/* .dark:root {
   --app-container: #1f1d2b;
   --app-container: #111827;
   --main-color: #fff;
@@ -43,7 +43,7 @@
   --more-list-bg-hover:  rgba(195, 207, 244, 0.1);
   --more-list-shadow: rgba(195, 207, 244, 0.1);
   --message-btn: rgba(195, 207, 244, 0.1);
-}
+} */
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -108,7 +108,7 @@ h5{
   font-size: 0.77rem;
 }
 
-.profile-btn {
+/* .profile-btn {
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -131,7 +131,7 @@ h5{
     line-height: 24px;
     font-weight: 700;
   }
-}
+} */
 
 .text-muted{
   color: var(--link-color);
