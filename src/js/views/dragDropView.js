@@ -19,14 +19,6 @@ class DragDropView {
 
   addHandlerDragOver(handler) {
     this._containers.forEach(container => {
-      // need this to listen for drop
-      container.addEventListener('drop', function() {
-        const draggable = document.querySelector('.dragging')
-        const status = container.className.split(' ')[1];
-        const id = draggable.id.split('_')[1];
-        handler(id, status);
-      });
-
       container.addEventListener('dragover', (e) => {
         e.preventDefault();
         const afterElement = this._getDragAfterElement(container, e.clientY)
@@ -38,6 +30,10 @@ class DragDropView {
           // container.insertBefore(draggable, afterElement)
           container.getElementsByClassName("containers")[0].insertBefore(draggable, afterElement);
           }
+        const status = container.className.split(' ')[1];
+        const id = draggable.id.split('_')[1];
+        console.log(id, status);
+        handler(id, status);
       })
     });
   };
