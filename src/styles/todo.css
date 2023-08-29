@@ -81,6 +81,11 @@ body {
   min-height: 100vh; 
   grid-column-gap: 1.5rem;
 }
+.project-tasks svg {
+  fill: var(--light-grey);
+  width: 1.6rem;
+  height: 1.6rem;
+}
 .project-column-heading {
   margin-bottom: 1rem;
   display: flex;
@@ -151,8 +156,6 @@ body {
 .task__add {
   background: transparent;
   border: 0;
-  color: var(--light-grey);
-  font-size: 17px;
   cursor: pointer;
 }
 .task__options {
@@ -166,10 +169,22 @@ body {
   position: relative;
   width: 100%;
   color: var(--light-grey);
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.task__stats svg{
+  margin-right: 2px;
+  fill: var(--light-grey);
+  width: 18px;
+  height: 18px;
+}
+.flag-note-owner__container span,
+.edit-delete__container button {
+  display: inline-block;
+  vertical-align: middle; 
+  /* margin-right:2px; */
 }
 .edit-delete__container {
   display: flex;
@@ -192,23 +207,20 @@ body {
   cursor: pointer;
   margin-right: 5px;
 }
-.task__delete:hover{
-  color: #ef5c48;
+.task__delete:hover svg{
+  fill: #ef5c48;
 }
 .task__stats span:not(:last-of-type) {
-  margin-right: 1rem;
+  margin-right: 0.7rem;
 }
-.task__stats svg {
-  margin-right: 5px;
-}
-.task__owner {
+/*.task__owner {
   width: 25px;
   height: 25px;
   border-radius: 100rem;
   background: var(--purple);
-  /* position: absolute; */
+  //position: absolute;
   display: inline-block;
-}
+}*/
 .task-hover {
   border: 3px dashed var(--light-grey) !important;
 }
@@ -549,6 +561,3 @@ body {
   flex-grow: 1; 
 }
 
-time{
-  font-size: 12px;
-}

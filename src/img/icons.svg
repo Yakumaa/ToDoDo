@@ -31,5 +31,34 @@
 <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/>
 </symbol>
 
+<symbol id="icon-add" viewBox="0 0 24 24">
+<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+</symbol>
+
+<symbol id="icon-close" viewBox="0 0 24 24">
+<path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+</symbol>
+
+<symbol id="icon-more_horiz" viewBox="0 0 24 24">
+<path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+</symbol>
+
+<symbol id="icon-flag" viewBox="0 0 24 24">
+<path d="M14.4 6 14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6z"/>
+</symbol>
+
+<symbol id="icon-chat_bubble" viewBox="0 0 24 24">
+<path d="M22 2H2v20l4-4h16V2z"/>
+</symbol>
+
+<symbol id="icon-edit" viewBox="0 0 24 24">
+<path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM21.41 6.34l-3.75-3.75-2.53 2.54 3.75 3.75 2.53-2.54z"/>
+</symbol>
+
+<symbol id="icon-delete" viewBox="0 0 24 24">
+<path d="M6 21h12V7H6v14zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+</symbol>
+
+
 </defs>
 </svg>

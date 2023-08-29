@@ -18,15 +18,15 @@ class AddTodoView extends View {
   };
 
   _createCloseBtn() {
-    this._plusBtn.innerHTML = '';
-    this._plusBtn.innerText = 'close';
+    this._plusBtn.innerText = '';
+    this._plusBtn.innerHTML = "<svg><use href='src/img/icons.svg#icon-close'></use></svg>";
+    this._plusBtn.querySelector('use').setAttribute('fill', 'rgb(248 113 113)');
     this._plusBtn.classList.remove('add');
-    this._plusBtn.style.color = "rgb(248 113 113)";
   }
 
   _createAddBtn() {
-    this._plusBtn.innerHTML = '';
-    this._plusBtn.innerText = 'add';
+    this._plusBtn.innerText = '';
+    this._plusBtn.innerHTML = "<svg><use href='src/img/icons.svg#icon-add'></use></svg>";
     this._plusBtn.classList.add('add');
     this._plusBtn.style.color = 'var(--light-grey)';
   }
