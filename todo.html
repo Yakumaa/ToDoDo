@@ -103,11 +103,17 @@
 						<div class="buttons-container">
 							<!-- Create new task button-->
 							<button class='task__add' id="add__todo-btn">
-								<span id="todo__plus-btn" class="material-icons-sharp add">add</span>
+								<!-- <span id="todo__plus-btn" class="material-icons-sharp add">add</span> -->
+								<span id="todo__plus-btn" class="add">
+									<svg><use href="src/img/icons.svg#icon-add"></use></svg>
+								</span>
 							</button>
 
 							<button class='project-column-heading__options'>
-								<span class="material-icons-sharp">more_horiz</span>
+								<!-- <span class="material-icons-sharp">more_horiz</span> -->
+								<span>
+									<svg><use href="src/img/icons.svg#icon-more_horiz"></use></svg>
+								</span>
 							</button>
 						</div>
 					</div>
@@ -184,8 +190,11 @@
 				<div class='project-column progress'>
 					<div class='project-column-heading'>
 						<h2 class='project-column-heading__title'>In Progress</h2>
-						<button class='project-column-heading__options'><span
-								class="material-icons-sharp">more_horiz</span></button>
+						<button class='project-column-heading__options'>
+							<span>
+								<svg><use href="src/img/icons.svg#icon-more_horiz"></use></svg>
+							</span>
+						</button>
 					</div>
 					<div class='progress--container containers'>
 						<!-- <div class='task' draggable='true'>
@@ -209,8 +218,11 @@
 				<div class='project-column done'>
 					<div class='project-column-heading'>
 						<h2 class='project-column-heading__title'>Done</h2>
-						<button class='project-column-heading__options'><span
-								class="material-icons-sharp">more_horiz</span></button>
+						<button class='project-column-heading__options'>
+							<span>
+								<svg><use href="src/img/icons.svg#icon-more_horiz"></use></svg>
+							</span>
+						</button>
 					</div>
 					<div class='done--container containers'>
 						<!-- <div class='task' draggable='true'>
